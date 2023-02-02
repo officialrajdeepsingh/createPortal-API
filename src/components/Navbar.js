@@ -5,7 +5,7 @@ function Navbar() {
         <nav class="navbar navbar bg-primary mb-4">
         <div class="container-fluid" style={{justifyContent:"center"}}>
             <a class="navbar-brand text-center" href="/">
-            createPortal API demo
+            createPortal API Demo
             </a>
         </div>
         </nav>

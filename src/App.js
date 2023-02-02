@@ -3,7 +3,11 @@ import { createPortal } from 'react-dom';
 import Alert from './components/Alert.js';
 import Card from "./components/Card";
 import Navbar from './components/Navbar.js';
+
+// target the share-alert ID
 let shareAlert =document.getElementById('share-alert')
+
+
 export default function PortalExample() {
   const [showModal, setShowModal] = useState(false);
   return (
