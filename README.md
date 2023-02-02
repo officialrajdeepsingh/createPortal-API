@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+# Getting Started with createPortal-API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The reactjs createPortal API demo help to learn how to createPortal API in reactjs, and how is use it? 
 
-## Available Scripts
+First clone the project from github, with following command run:
 
-In the project directory, you can run:
+```bash
+git clone https://officialrajdeepsingh.github.io/createPortal-API/
+
+cd createPortal-API
+
+pnpm install
+
+# or 
+
+yarn install 
+```
+
 
 ### `npm start`
 
