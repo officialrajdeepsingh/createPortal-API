@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
+import Alert from './components/Alert.js';
+import Card from "./components/Card";
+import Navbar from './components/Navbar.js';
+let shareAlert =document.getElementById('share-alert')
+export default function PortalExample() {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    { 
+      showModal && createPortal(
+        <Alert onClose={() => setShowModal(false)} />,
+        shareAlert
+      )
+    }
+    <Navbar />
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        <Card onClick={() => setShowModal(true)} />
+        <Card onClick={() => setShowModal(true)} />
+        <Card onClick={() => setShowModal(true)} />
+      </div>
+
+      
+    </>
   );
 }
-
-export default App;
